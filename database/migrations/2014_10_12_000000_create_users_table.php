@@ -27,6 +27,9 @@ class CreateUsersTable extends Migration
             $table->foreign('id_persona')->references('id')->on('personas')->onDelete('cascade');
             $table->foreign('id_rol')->references('id')->on('roles')->onDelete('cascade');
         });
+        DB::table('users')->insert(array('id'=>'1','id_persona'=>'1','id_rol'=> '1',
+        'name'=>'admin','email'=>'admin@gmail.com',
+        'password'=>'$2y$10$.aKA2oTZOQDVlkwDCXXbzO2r6rfXliKzYL9.1Fi2MBR8I.9LvmZZW', 'estado'=>'1'));
     }
 
     /**

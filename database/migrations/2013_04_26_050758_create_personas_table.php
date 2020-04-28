@@ -20,6 +20,7 @@ class CreatePersonasTable extends Migration
             $table->string('apellido');
             $table->timestamps();
         });
+        DB::table('personas')->insert(array('id'=>'1','cedula'=>'000','nombre'=>'admin','apellido'=> 'admin'));
     }
 
     /**
